@@ -15,7 +15,7 @@ Clone Project dan jalankan perintah pada terminal sebagai berikut :
 
 ```
 git clone https://github.com/necrology/MaulanaGandawijaya_fdtest.git
-cd MaulanaGandawijaya_fdtest.git
+cd MaulanaGandawijaya_fdtest
 ```
 
 Install dan Update Composer dengan perintah :
@@ -79,5 +79,6 @@ php artisan serve
 Lalu buka terminal baru dan jalankan juga perintah :
 
 ```
+cd MaulanaGandawijaya_fdtest
 npm run dev
 ```
