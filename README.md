@@ -33,6 +33,8 @@ npm install @inertiajs/vue3
 
 Lanjut copy file <code>.env.example</code> dengan nama <code>.env</code> Kemudian hapus hastag dan edit beberapa di file berikut ini:
 
+Terkait database <code>dengan ketentuan database sudah dibuat</code>
+
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
@@ -42,7 +44,7 @@ DB_USERNAME={isi dengan username postgresql} //tanpa menggunakan tanda kurung ku
 DB_PASSWORD={isi dengan password posgresql} //tanpa menggunakan tanda kurung kurawal
 ```
 
-Lalu edit juga bagian service mail seperti berikut :
+Lalu edit juga bagian untuk service email seperti berikut :
 
 ```
 MAIL_MAILER=smtp
