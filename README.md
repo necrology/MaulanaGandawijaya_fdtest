@@ -31,7 +31,7 @@ Install Inertia Vue dengan perintah :
 npm install @inertiajs/vue3
 ```
 
-Lanjut copy file <code>.env.example</code> dengan nama <code>.env</code> Kemudian edit beberapa di file berikut ini:
+Lanjut copy file <code>.env.example</code> dengan nama <code>.env</code> Kemudian hapus hastag dan edit beberapa di file berikut ini:
 
 ```
 DB_CONNECTION=pgsql
