@@ -82,3 +82,13 @@ Lalu buka terminal baru dan jalankan juga perintah :
 cd MaulanaGandawijaya_fdtest
 npm run dev
 ```
+
+## Third-party libraries yang digunakan
+
+- Inertia Js untuk menjadikan aplikasi menjadi SPA
+- Inertia Vue kolaborasi dengan vue js
+- Laravel Breeze untuk autentikasi yang lebih efisien, optimal dan aman
+
+## Penambahan fitur
+
+- Pada landing page menambahkan fitur detail ketika data buku muncul untuk melihat secara detail buku yang ada
