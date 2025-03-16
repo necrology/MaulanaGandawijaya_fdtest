@@ -11,21 +11,21 @@ Ini adalah aplikasi yang saya buat dengan laravel versi 11 dikombinasikan dengan
 
 ## Instalasi
 
-Clone Project :
+Clone Project dan jalankan perintah pada terminal sebagai berikut :
 
 ```
 git clone https://github.com/necrology/MaulanaGandawijaya_fdtest.git
 cd MaulanaGandawijaya_fdtest.git
 ```
 
-Install dan Update Composer :
+Install dan Update Composer dengan perintah :
 
 ```
 composer install
 composer update
 ```
 
-Install Inertia Vue
+Install Inertia Vue dengan perintah :
 
 ```
 npm install @inertiajs/vue3
