@@ -92,3 +92,13 @@ npm run dev
 ## Penambahan fitur
 
 - Pada landing page menambahkan fitur detail ketika data buku muncul untuk melihat secara detail buku yang ada
+
+## Dokumen Unit Test
+
+Dokumen unit test berada pada folder berikut :
+
+```plaintext
+MaulanaGandawijaya_fdtest/
+├── documentation/                  # Folder dokumentasi
+│   ├── Technical Testing Maulana Gandawijaya - Unit Test.pdf       
+```
