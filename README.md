@@ -4,10 +4,10 @@ Ini adalah aplikasi yang saya buat dengan laravel versi 11 dikombinasikan dengan
 
 ## System Requirements
 
-- PHP <code>v8.*.*</code>
-- Node Js <code>v22.*.*</code>
-- PostgreSql <code>v17.*.*</code> + Driver PostgreSql JDBC (Jika driver tidak ditemukan ketika laravel mencoba koneksi)
-- Composer <code>v2.*.*</code>
+- PHP <code>v8+</code>
+- Node Js <code>v22+</code>
+- PostgreSql <code>v17+</code> + Driver PostgreSql JDBC (Jika driver tidak ditemukan ketika laravel mencoba koneksi)
+- Composer <code>v2+</code>
 
 ## Instalasi
 
