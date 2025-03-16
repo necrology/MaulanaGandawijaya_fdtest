@@ -12,7 +12,17 @@ Ini adalah aplikasi yang saya buat dengan laravel versi 11 dikombinasikan dengan
 ## Instalasi
 
 Clone Project :
+
 ```
 git clone https://github.com/necrology/MaulanaGandawijaya_fdtest.git
 cd MaulanaGandawijaya_fdtest.git
 ```
+
+Install dan Update Composer :
+
+```
+composer install
+composer update
+```
+
+Lanjut copy file <code>.env.example</code> dengan nama <code>.env</code> Kemudian edit beberapa di file berikut ini:
