@@ -1,0 +1,48 @@
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: portfolio_db
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - portfolio_mysql_data:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: portfolio_db
+      AUTH_SECRET: ${AUTH_SECRET}
+      ADMIN_SESSION_DAYS: ${ADMIN_SESSION_DAYS:-7}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://maulana-gandawijaya.my.id}
+      CONTACT_NOTIFICATION_WEBHOOK_URL: ${CONTACT_NOTIFICATION_WEBHOOK_URL:-}
+      NODE_ENV: production
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    volumes:
+      - ./public/uploads:/app/public/uploads
+
+volumes:
+  portfolio_mysql_data:
